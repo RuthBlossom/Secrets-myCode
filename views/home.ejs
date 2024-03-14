@@ -1,0 +1,33 @@
+<%- include('partials/header') %>
+
+
+<div class="jumbotron centered">
+  <div class="container">
+    <i class="fas fa-key fa-6x"></i>
+    <h1 data-value="secrets! " class="title">secrets</h1>
+
+    <div class="typewriter">Don't keep your secrets, share them anonymously!</div>
+    <hr>
+    <button type="button" class="cti" onclick="window.location.href='/register'">
+      <div class="CTI">Register</div>
+    </button>
+    <button type="button" class="cti" onclick="window.location.href='/login'">
+      <div class="CTI">Login</div>
+    </button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+<%- include('partials/footer') %>
+
+//This is an onclick attribute in an HTML element. It's used to specify a JavaScript code that should be executed when the element is clicked.
+//In this specific case, the code window.location.href='/login' is provided. This code sets the href property of the window.location object to '/login', effectively redirecting the browser to the URL specified, which is /login in this case.
+//So, when the element with this onclick attribute is clicked, it will trigger a JavaScript function that will navigate the browser to the /login page.
+//It mixes HTML with JavaScript, which might not be considered best practice for larger, more complex applications.
+
+
+//The role attribute is an accessibility feature in HTML5. It is used to specify the semantic meaning or purpose of an element on a web page.
+//When you set role="button", you are indicating that the element should be treated as a button, even if it's not an actual button element. This is important for screen readers & other assistive technologies, as it helps convey the purpose of the element to users who may not be able to see it.
+//It's important to note that role="button" alone doesn't provide any functionality. It's used in conjunction with JavaScript or other event-handling mechanisms to define what happens when the "button" is interacted with (e.g., clicked).
+//If you're building a more complex web application with dynamic interactivity and accessibility is a priority, you might want to use role="button" in combination with JavaScript to define the behavior of your buttons.

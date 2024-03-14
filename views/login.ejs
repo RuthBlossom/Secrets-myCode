@@ -1,0 +1,104 @@
+<%- include('partials/header') %>
+
+<div class="container mt-5">
+
+
+  <div class="card">
+    <div class="bear">
+
+    <!-- Panda Animation -->
+
+      <div class="card">
+        <div class="bear">
+          <div class="login">
+            <form action="/register" method="POST">
+              <i class="fa fa-user" aria-hidden="true">&nbsp;&nbsp;</i><input type="text" placeholder="Username"><br><br>
+              <i class="fa fa-unlock-alt" aria-hidden="true">&nbsp;&nbsp;</i><input type="password"placeholder="Password"><br><br>
+              <button type="submit" class="shake-button">Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      </body>
+
+
+
+      </div>
+      <div class="backg">
+        <div class="panda">
+          <div class="earl"></div>
+          <div class="earr"></div>
+          <div class="face">
+            <div class="blshl"></div>
+            <div class="blshr"></div>
+            <div class="eyel">
+              <div class="eyeball1"></div>
+            </div>
+            <div class="eyer">
+              <div class="eyeball2"></div>
+            </div>
+            <div class="nose">
+              <div class="line"></div>
+            </div>
+            <div class="mouth">
+              <div class="m">
+                <div class="m1"></div>
+              </div>
+              <div class="mm">
+                <div class="m1"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pawl">
+        <div class="p1">
+          <div class="p2"></div>
+          <div class="p3"></div>
+          <div class="p4"></div>
+        </div>
+      </div>
+      <div class="pawr">
+        <div class="p1">
+          <div class="p2"></div>
+          <div class="p3"></div>
+          <div class="p4"></div>
+        </div>
+      </div>
+      <div class="handl"></div>
+      <div class="handr"></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Link the panda.js script -->
+<script src="/panda.js"></script>
+
+<script>
+  function submitForm() {
+    const email = document.getElementById('emailInput').value;
+    const password = document.getElementById('passwordInput').value;
+
+    const xhr = new XMLHttpRequest();
+
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        console.log('Success:', xhr.responseText);
+      }
+    };
+
+    xhr.onerror = function() {
+      console.error('Error:', xhr.statusText);
+    };
+
+    xhr.open('POST', '/login');
+    xhr.setRequestHeader('Content-Type', 'application/json');
+
+    const data = JSON.stringify({ email: email, password: password });
+
+    xhr.send(data);
+  }
+</script>
+
+<%- include('partials/footer') %>
